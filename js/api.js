@@ -40,9 +40,10 @@ const originalProducts = [
 ============================== */
 
 const API_URLS = [
-  "https://dummyjson.com/products/category/sunglassbes?limit=20",
+ "https://dummyjson.com/products/category/mens-shirts?limit=20",
+   "https://dummyjson.com/products/category/sunglassbes?limit=20",
   "https://dummyjson.com/products/category/tops?limit=20",
-  "https://dummyjson.com/products/category/mens-shirts?limit=20"
+ 
 ];
 
 
