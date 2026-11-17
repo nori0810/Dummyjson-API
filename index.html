@@ -1,32 +1,302 @@
+<!DOCTYPE html> 
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAMINA</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="ja"> 
 
-    <script src="script.js" defer></script>
-    <script src="js/api.js" defer></script>
-    <script src="js/products.js" defer></script>
-</head>
+<head> 
 
-<body>
-    <header>
-        <h1>LAMINA</h1>
-    </header>
+    <meta charset="UTF-8"> 
 
-    <p>オンラインショップ</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-    <main>
-        <h2>商品一覧</h2>
+    <title>LAMINA</title> 
 
-        <!-- APIから商品を自動表示する場所 -->
-        <div id="list" class="card-card">
-            <p>商品を読み込んでいます...</p>
-        </div>
+    <link rel="stylesheet" href="style.css"> 
 
-    </main>
-</body>
-</html>
+ 
+ 
+
+    <script src="script.js" defer></script> 
+
+    <script src="js/api.js" defer></script> 
+
+    <script src="js/products.js" defer></script> 
+
+</head> 
+
+ 
+ 
+
+<body> 
+
+ 
+ 
+
+    <header> 
+
+        <h1>LAMINA</h1> 
+
+    </header> 
+
+ 
+ 
+
+    <p>オンラインショップ</p> 
+
+ 
+ 
+
+    <main> 
+
+ 
+ 
+
+        <!-- 商品一覧画面 --> 
+
+        <section id="product-list-page"> 
+
+ 
+ 
+
+            <div class="Products"> 
+
+                <h2>商品一覧</h2> 
+
+ 
+ 
+
+                <button class="button" onclick="showAddPage()"> 
+
+                    追加 
+
+                </button> 
+
+ 
+ 
+
+                <button class="button"> 
+
+                    削除 
+
+                </button> 
+
+            </div> 
+
+ 
+ 
+
+            <!-- APIから商品を自動表示する場所 --> 
+
+            <div id="list" class="card-card"> 
+
+                <p>商品を読み込んでいます...</p> 
+
+            </div> 
+
+ 
+ 
+
+        </section> 
+
+ 
+ 
+ 
+
+        <!-- 商品追加画面 --> 
+
+        <section id="add-product-page" style="display: none;"> 
+
+ 
+ 
+
+         
+
+ 
+ 
+
+            <h2>新しい商品を登録</h2> 
+
+ 
+ 
+
+            <form id="add-product-form"> 
+
+ 
+ 
+
+                <!-- 商品名 --> 
+
+                <div> 
+
+                    <label for="product-name">商品名</label> 
+
+                    <input 
+
+                        type="text" 
+
+                        id="product-name" 
+
+                        name="product-name" 
+
+                        placeholder="パーカー" 
+
+                        required 
+
+                    > 
+
+                </div> 
+
+ 
+ 
+
+                <!-- 商品説明 --> 
+
+                <div> 
+
+                    <label for="product-description">商品説明</label> 
+
+                    <textarea 
+
+                        id="product-description" 
+
+                        name="product-description" 
+
+                        placeholder="着心地の良いパーカーです。" 
+
+                        required 
+
+                    ></textarea> 
+
+                </div> 
+
+ 
+ 
+
+                <!-- 価格 --> 
+
+                <div> 
+
+                    <label for="product-price">価格</label> 
+
+                    <input 
+
+                        type="number" 
+
+                        id="product-price" 
+
+                        name="product-price" 
+
+                        placeholder="2999" 
+
+                        min="0" 
+
+                        required 
+
+                    > 
+
+                </div> 
+
+ 
+ 
+
+                <!-- 画像URL --> 
+
+                <div> 
+
+                    <label for="product-image">画像URL</label> 
+
+                    <input 
+
+                        type="url" 
+
+                        id="product-image" 
+
+                        name="product-image" 
+
+                        placeholder="https://example.com/" 
+
+                        required 
+
+                    > 
+
+                </div> 
+
+ 
+ 
+
+                <!-- 商品追加 --> 
+
+                <button type="submit"> 
+
+                    ＋ 商品を追加 
+
+                </button> 
+
+ 
+ 
+
+            </form> 
+
+ 
+ 
+
+            <!-- 商品一覧に戻る --> 
+
+            <button type="button" onclick="showListPage()"> 
+
+                戻る 
+
+            </button> 
+
+ 
+ 
+
+        </section> 
+
+ 
+ 
+
+    </main> 
+
+ 
+ 
+
+    <script> 
+
+        // 商品追加画面に切り替え 
+
+        function showAddPage() { 
+
+            document.getElementById("product-list-page").style.display = "none"; 
+
+            document.getElementById("add-product-page").style.display = "block"; 
+
+        } 
+
+ 
+ 
+
+        // 商品一覧画面に戻る 
+
+        function showListPage() { 
+
+            document.getElementById("add-product-page").style.display = "none"; 
+
+            document.getElementById("product-list-page").style.display = "block"; 
+
+        } 
+
+    </script> 
+
+ 
+ 
+
+</body> 
+
+</html> 
+
+ 
+ 
+ 
+ 
+
+ 
